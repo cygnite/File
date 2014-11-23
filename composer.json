@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Cygnite\\Common\\File": ""
+            "Cygnite\\Common\\File": "src/"
         }
     },
     "target-dir": "Cygnite\\Common\\File",
