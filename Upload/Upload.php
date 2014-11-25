@@ -13,6 +13,7 @@ namespace Cygnite\Common\File\Upload;
 
 use InvalidArgumentException;
 
+define("DS", DIRECTORY_SEPARATOR);
 /**
  * Upload.
  *

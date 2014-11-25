@@ -13,7 +13,7 @@ namespace Cygnite\Common\File\Thumbnail;
 
 use Cygnite\Cygnite;
 
-defined("DS") or define("DS", DIRECTORY_SEPARATOR);
+define("DS", DIRECTORY_SEPARATOR);
 
 
 /**
