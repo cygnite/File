@@ -12,7 +12,9 @@
 namespace Cygnite\Common\File\Thumbnail;
 
 use Cygnite\Cygnite;
-use Cygnite\Inflectors;
+
+defined("DS") or define("DS", DIRECTORY_SEPARATOR);
+
 
 /**
  * Image Thumbnail.
@@ -141,7 +143,7 @@ class Image
      */
     private function imageCreateFrom($type, $src, $func = null)
     {
-        $func = Inflector::instance()s->changeToLower(__FUNCTION__.$type);
+        $func = strtolower(__FUNCTION__.$type);
 
         return (is_callable($func))
             ? $func($src)
@@ -161,7 +163,7 @@ class Image
      */
     private function image($type, $thumb, $name, $func = null)
     {
-        $func = Inflector::instance()s->changeToLower(__FUNCTION__.$type);
+        $func =strtolower(__FUNCTION__.$type);
 
         /** @var $func TYPE_NAME */
         //if (is_callable($func)) {
