@@ -24,7 +24,7 @@ defined("DS") or define("DS", DIRECTORY_SEPARATOR);
  * @example
  * <code>
  *    Example:
- *    $thumb = new \Apps\Components\Thumbnail\Image();
+ *    $thumb = new \Cygnite\Common\File\Thumbnail\Image();
  *    $thumb->directory = 'Set your directory path';
  *    $thumb->fixedWidth  = 100;
  *    $thumb->fixedHeight = 100;
