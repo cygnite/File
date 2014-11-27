@@ -3,9 +3,9 @@ File Component
 
 Cygnite file component handling file upload and creating thumbnail image etc.
 
-    Upload file using file component.
+Upload file using file component.
   
-    Example Usage:
+Example Usage:
 
 	use Cygnite\Common\File\Upload\Upload;
 
@@ -26,11 +26,11 @@ Cygnite file component handling file upload and creating thumbnail image etc.
 	// var_dump($status);
 	
 	
-	Image Cropping / Thumbnail Image:
+Image Cropping / Thumbnail Image:
 	
-	Make thumbnail image.
+Make thumbnail image.
 	
-	Example Usage:
+Example Usage:
 
 
 	use Cygnite\Common\File\Thumbnail\Image;
