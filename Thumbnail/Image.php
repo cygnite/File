@@ -184,17 +184,17 @@ class Image
         //if (is_callable($func)) {
         if ($func(
                 $thumb,
-                getcwd().DS.str_replace(
-                    array(
-                        '/',
-                        '\\'
-                    ),
-                    DS,
-                    $this->thumbPath
+                $this->rootDir.str_replace(
+                array(
+                    '/',
+                    '\\'
+                ),
+                DS,
+                $this->thumbPath
                 ).$name
             )
             ) {
-                chmod(getcwd().DS.str_replace(array('/', '\\'), DS, $this->thumbPath).$name, 0777);
+                chmod($this->rootDir.str_replace(array('/', '\\'), DS, $this->thumbPath).$name, 0777);
         } else {
                 throw new \Exception("Unknown Exception  while generating thumb image");
         }
