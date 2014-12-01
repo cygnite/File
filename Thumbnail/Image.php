@@ -81,7 +81,7 @@ class Image
     public function setRootDir($rootPath = false)
     {
         if ($rootPath) {
-            $this->rootDir = $rootPath;
+            $this->rootDir = $rootPath.DS;
         } else {
             $this->rootDir = getcwd().DS;
         }
