@@ -45,7 +45,15 @@ class Image
     public $imageTypes = array("jpg","png","jpeg","gif");
 
     //Set valid type of properties to avoid exceptions
-    private $validProperties = array('directory', 'fixedWidth', 'fixedHeight', 'thumbPath', 'thumbName');
+    private $validProperties = array(
+        'directory',
+        'fixedWidth',
+        'fixedHeight',
+        'thumbPath',
+        'thumbName'
+    );
+
+    private $rootDir;
 
     /**
      * @param $key   name of the property
@@ -67,8 +75,15 @@ class Image
      */
     public function __get($key)
     {
-        if (isset($this->thumbs[$key])) {
-              return $this->thumbs[$key];
+        return isset($this->thumbs[$key]) ? $this->thumbs[$key] : null;
+    }
+
+    public function setRootDir($rootPath = false)
+    {
+        if ($rootPath) {
+            $this->rootDir = $rootPath;
+        } else {
+            $this->rootDir = getcwd().DS;
         }
     }
 
@@ -81,7 +96,7 @@ class Image
     public function resize()
     {
         $path = array();
-        $src = getcwd().DS.str_replace(array('/','\\'), DS, $this->directory);	 /* read the source image */
+        $src = $this->rootDir.str_replace(array('/','\\'), DS, $this->directory);	 /* read the source image */
 
 
         if (file_exists($src)) {
