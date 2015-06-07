@@ -2,6 +2,7 @@
     "name": "cygnite/file",
     "license": "MIT",
     "keywords": ["Cygnite", "File", "Upload", "Thumbnail"],
+    "description": "Cygnite File Component. This package use for File Upload, Image Thumbnail Creation etc.",
     "authors": [
         {
             "name": "Sanjoy Dey",
