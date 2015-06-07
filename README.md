@@ -1,6 +1,13 @@
 File Component
 ===========
 
+#Installation
+
+Array Manipulator uses Composer for installation. For installing composer documentation, please refer to getcomposer.org.
+Add following into your composer.json.
+
+    "cygnite/file" : "1.*"
+
 Cygnite file component handling file upload and creating thumbnail image etc.
 
 Upload file using file component.
